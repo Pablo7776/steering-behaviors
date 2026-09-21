@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dkmynydhvvfvu"]
+
+[ext_resource type="Texture2D" uid="uid://b73y85x4xvv0" path="res://icon.svg" id="1_bqh24"]
+[ext_resource type="Script" uid="uid://my7ts13kx8ry" path="res://Scripts/coward(payaso).gd" id="1_qdwrp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8ekr"]
+size = Vector2(118, 108)
+
+[node name="Coward(payaso)" type="CharacterBody2D" unique_id=932187323]
+script = ExtResource("1_qdwrp")
+max_speed = 350.0
+wander_radius = 90.0
+wander_distance = 90.0
+flee_radius = 150.0
+return_to_wander_radius = 180.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1189315114]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_f8ekr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=944567152]
+modulate = Color(1, 1, 0.1764706, 1)
+texture = ExtResource("1_bqh24")
+
+[node name="Label" type="Label" parent="." unique_id=1709842108]
+offset_left = -65.0
+offset_top = -119.0
+offset_right = 70.0
+offset_bottom = -70.0
+theme_override_font_sizes/font_size = 35
+text = "PAYASO"

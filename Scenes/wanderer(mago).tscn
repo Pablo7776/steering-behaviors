@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://tnl2u52wkook"]
+
+[ext_resource type="Texture2D" uid="uid://b73y85x4xvv0" path="res://icon.svg" id="1_7od6h"]
+[ext_resource type="Script" uid="uid://dbs3u4guck0m0" path="res://Scripts/wanderer(mago).gd" id="1_dm0ya"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8ekr"]
+size = Vector2(114, 117)
+
+[node name="Wanderer(mago)" type="CharacterBody2D" unique_id=2012517080]
+script = ExtResource("1_dm0ya")
+max_speed = 250.0
+wander_radius = 97.0
+wander_distance = 90.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1293019684]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_f8ekr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1541695589]
+modulate = Color(0.015686275, 0.1254902, 1, 1)
+texture = ExtResource("1_7od6h")
+
+[node name="Label" type="Label" parent="." unique_id=416151936]
+offset_left = -54.0
+offset_top = -127.0
+offset_right = 54.0
+offset_bottom = -78.0
+theme_override_font_sizes/font_size = 35
+text = "MAGO"

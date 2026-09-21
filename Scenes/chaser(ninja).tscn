@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cihwq6vs8np6o"]
+
+[ext_resource type="Script" uid="uid://b8h3wd2kp2ngk" path="res://Scripts/chaser(ninja).gd" id="1_2p5ct"]
+[ext_resource type="Texture2D" uid="uid://b73y85x4xvv0" path="res://icon.svg" id="1_lr624"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa0ct"]
+size = Vector2(112, 115)
+
+[node name="Chaser(ninja)" type="CharacterBody2D" unique_id=692630065]
+script = ExtResource("1_2p5ct")
+max_speed = 201.0
+wander_radius = 90.0
+wander_distance = 80.0
+seek_radius = 250.0
+return_to_wander_radius = 331.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1230447184]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_sa0ct")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=683121870]
+modulate = Color(0.6784314, 0.28627452, 0, 1)
+texture = ExtResource("1_lr624")
+
+[node name="Label" type="Label" parent="." unique_id=1810830338]
+offset_left = -48.0
+offset_top = -119.0
+offset_right = 51.0
+offset_bottom = -70.0
+theme_override_font_sizes/font_size = 35
+text = "NINJA"
